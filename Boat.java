@@ -12,6 +12,8 @@ public abstract class Boat
         strength = strengthh;
         vision = visionn;
         obj = location;
+        locationx = location.getX();
+        locationy = location.getY();
     }
     public int getTeam(){
         return team;
