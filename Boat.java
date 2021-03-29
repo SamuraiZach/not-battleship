@@ -147,23 +147,23 @@ public abstract class Boat
             if( direction  == 0){
                 direction = 7;
                 getDirection();
-                an = "S1 turned left, now facing "+ directo;
+                an = getID() + " turned left, now facing "+ directo;
             }else{
                 direction -= 1;
                 getDirection();
-                an = "S1 turned left, now facing "+ directo;
+                an = getID() + " turned left, now facing "+ directo; 
             }
         }
         else if(x == 1){
             if(direction  == 7){
                 direction = 0;
                 getDirection();
-                an = "S1 turned right, now facing "+ directo;
+                an = getID() + " turned left, now facing "+ directo;
             }
             else{
                 direction += 1;
                 getDirection();
-                an = "S1 turned right, now facing "+ directo;
+                an = getID() + " turned left, now facing "+ directo;
             }
         }
         return an;

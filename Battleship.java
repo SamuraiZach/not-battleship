@@ -8,9 +8,9 @@ public class Battleship extends Boat implements Attacker
         boooat = teamm;
     }
     public String getID(){
-        int AtA = 65;
+        int AtA = 64;
         char ReportChar = (char)(AtA + boooat);
-        return("B"+ReportChar);
+        return("B"+boooat);
     }
     public String getActions(){
         return("Choose any of the following actions for the Battleship:\n1.Move\n2.Turn left\n3.Turn right\n4.Attack");

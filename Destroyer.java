@@ -10,7 +10,7 @@ public class Destroyer extends Boat implements Attacker
     public String getID(){
         int AtA = 65;
         char ReportChar = (char)(AtA + boatt);
-        return("D"+ReportChar);
+        return("D"+boatt);
     }
     public String getActions(){
         return("Choose any of the following actions for the Destroyer:\n1.Move\n2.Turn left\n3.Turn right\n4.Attack");

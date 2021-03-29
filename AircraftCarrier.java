@@ -9,9 +9,9 @@ public class AircraftCarrier extends Boat implements Attacker
         booatie = teamm;
     }
     public String getID(){
-        int AtA = 65;
+        int AtA = 64;
         char ReportChar = (char)(AtA + booatie);
-        return("A"+ReportChar);
+        return("A"+ booatie);
     }
     public String getActions(){
         return("Choose any of the following actions for the Aircraft Carrier:\n1.Move\n2.Turn left\n3.Turn right\n4.Launch planes");
