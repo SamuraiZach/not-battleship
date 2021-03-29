@@ -31,7 +31,7 @@ public class World
         }
         for(int row = 0; row < map.length; row++){
             for(int col = 0; col < map[row].length; col++){
-                map[row][col] = "";
+                map[row][col] = " ";
             }
         }
     }

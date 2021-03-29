@@ -8,6 +8,9 @@ public class Tester2 {
         bArr[1] = new AircraftCarrier(2,new Coordinates(5,5), 1);
         System.out.println(bArr[0]);
         System.out.println(bArr[1].locationx);
+        bArr[1].move(w1);
+        System.out.println(bArr[1].locationx);
+        System.out.println(bArr[1].locationy);
         String map = w1.drawTeamMap(bArr, 2);
         System.out.println(map);
     }
