@@ -109,7 +109,7 @@ public class World
                     if(col == 0 && row == 0){
                         map[col][row] = "@";
                     }else if(col == 0 && row > 0){
-                        int AtA = 65;
+                        int AtA = 64;
                         int x = 1;
                         char ReportChar = (char)(AtA + x);
                         map[col][row] = ReportChar;
