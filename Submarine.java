@@ -2,7 +2,6 @@ import java.lang.Math;
 public class Submarine extends ScoutBoat implements Attacker 
 {
     private int numOfTorpedoes, boatie;
-    private int team, direction, health, strength, vision;
     public Submarine(int teamm, Coordinates location, int directionn, int torpedoes)
     {
         super(teamm, directionn, 3, 1, 2, location);
@@ -63,6 +62,8 @@ public class Submarine extends ScoutBoat implements Attacker
             if(getDirection() == 0){
                 if(ash.array[locationx][locationy-1] == null && ash.array[locationx][locationy-2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
@@ -70,6 +71,8 @@ public class Submarine extends ScoutBoat implements Attacker
             else if(getDirection() == 2){
                 if(ash.array[locationx+1][locationy] == null && ash.array[locationx+2][locationy] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
@@ -77,6 +80,8 @@ public class Submarine extends ScoutBoat implements Attacker
             else if(getDirection() == 4){
                 if(ash.array[locationx][locationy+1] == null && ash.array[locationx][locationy+2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
@@ -84,6 +89,8 @@ public class Submarine extends ScoutBoat implements Attacker
             else{
                 if(ash.array[(locationx)-1][locationy] == null && ash.array[locationx-2][locationy] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
@@ -92,24 +99,32 @@ public class Submarine extends ScoutBoat implements Attacker
             if(getDirection() == 1){
                 if(ash.array[locationx+1][locationy-1] == null && ash.array[locationx+2][locationy-2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
             }else if(getDirection() == 3){
                 if(ash.array[locationx+1][locationy+1] == null && ash.array[locationx+2][locationy+2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
             }else if(getDirection() == 5){
                 if(ash.array[locationx-1][locationy+1] == null && ash.array[locationx-2][locationy+2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }
             }else{
                 if(ash.array[locationx-1][locationy-1] == null && ash.array[locationx-2][locationy-2] == null){
                     return "No boats in range";
+                }else if(numOfTorpedoes >= 1){
+                    return "No torps left";
                 }else{
                     return "Boat attacks";
                 }

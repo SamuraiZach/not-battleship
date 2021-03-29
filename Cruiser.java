@@ -1,11 +1,11 @@
 
 public class Cruiser extends ScoutBoat
 {
-    private int team, direction, health, strength, vision;
-    int boater;
+    
+    private int boater;
     public Cruiser(int teamm, Coordinates location, int directionn){
         super(teamm, directionn, 3, 0, 3, location);
-        int boater = teamm;
+        boater = teamm;
     }
     public String getID(){
         int AtA = 65;

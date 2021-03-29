@@ -1,15 +1,11 @@
 
 public class Battleship extends Boat implements Attacker
 {
-    private int team, direction, health, strength, vision;
     private int boooat;
     public Battleship(int teamm, Coordinates location, int directionn)
     {
         super(teamm, directionn, 4,3,1,location);
         boooat = teamm;
-        health = 4;
-        strength = 3;
-        vision = 1;
     }
     public String getID(){
         int AtA = 65;

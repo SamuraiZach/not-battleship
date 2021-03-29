@@ -2,12 +2,10 @@
 public class AircraftCarrier extends Boat implements Attacker
 {
     private boolean hasPlane;
-    private int team, direction, health, strength, vision;
     private int booatie;
     public AircraftCarrier(int teamm, Coordinates location, int directionn)
     {
         super(teamm, directionn, 5, 1, 1, location);
-        health = 1;
         booatie = teamm;
     }
     public String getID(){
