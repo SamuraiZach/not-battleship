@@ -8,9 +8,8 @@ public class Cruiser extends ScoutBoat
         boater = teamm;
     }
     public String getID(){
-        int AtA = 65;
-        char ReportChar = (char)(AtA + boater);
-        return("C"+boater);
+        
+        return("C"+ boater);
     }
     public String getActions(){
         return("Choose any of the following actions for the Cruiser: \n 1. Move \n2. Turn left\n3. Turn right");

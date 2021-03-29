@@ -9,8 +9,6 @@ public class AircraftCarrier extends Boat implements Attacker
         booatie = teamm;
     }
     public String getID(){
-        int AtA = 64;
-        char ReportChar = (char)(AtA + booatie);
         return("A"+ booatie);
     }
     public String getActions(){

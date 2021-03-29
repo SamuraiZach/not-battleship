@@ -6,11 +6,9 @@ public class Submarine extends ScoutBoat implements Attacker
     {
         super(teamm, directionn, 3, 1, 2, location);
         numOfTorpedoes = torpedoes;
-        boatie = teamm;
     }
     public String getID(){
-        
-        return("S"+boatie);
+        return("S"+ getTeam());
     }
     public String getActions(){
         return("Choose any of the following actions for the Submarine:\n1.Move\n2.Turn left\n3.Turn right\n4.Submerge\n5.Fire torpedoes");

@@ -102,6 +102,11 @@ public class World
         }
     }
     public String drawTeamMap(Boat[] Boats, int i){
+        for(int row = 0; row < map.length; row++){
+            for(int col = 0; col < map[row].length; col++){
+                map[row][col] = " ";
+            }
+        }
         String gFinal = "";
         int y = 1;
         int x = 1;
@@ -178,7 +183,9 @@ public class World
                             }
                         }
                     }else{
-                        map[col][row] = "###";
+                        if(map[col][row] != "~~~"){
+                            map[col][row] = "###";
+                        }
                     }
                 }
             }
@@ -199,7 +206,9 @@ public class World
                         map[col][row] = y;
                         y = y + 1;
                     }else if(array[col][row] == null){
-                        map[col][row] = "###";
+                        if(map[col][row] != "~~~"){
+                            map[col][row] = "###";
+                        }
                     }else{
                         for(int j = 0; j < Boats.length; j++){
                             if(Boats[j] == array[col][row]){
