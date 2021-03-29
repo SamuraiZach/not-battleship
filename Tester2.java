@@ -1,33 +1,12 @@
-
-/**
- * Write a description of class Tester2 here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Tester2
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Tester2
-     */
-    public Tester2()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class Tester {
+    public static void main(String[] args) {
+        Coordinates x = new Coordinates(3, 6);
+        System.out.println(x);
+        World w1 = new World(10, 10);
+        Boat[] bArr = new Boat[2];
+        bArr[0] = new Submarine(1,new Coordinates(4,4), 3, 4);
+        bArr[1] = new AircraftCarrier(2,new Coordinates(5,5), 1);
+        String map = w1.drawTeamMap(bArr, 2);
+        System.out.println(map);
     }
 }
