@@ -167,8 +167,8 @@ public class World
                             map[col][row-1] = "~~~";
                         }if(array[col][row+1] == null){
                             map[col][row+1] = "~~~";
-                        }if(array[col + 1][row + 1] != null){
-                            array[col + 1][row + 1] = "~~~";
+                        }if(array[col + 1][row + 1] == null){
+                            map[col + 1][row + 1] = "~~~";
                         }
                     }else{
                         map[col][row] = "###";
@@ -218,8 +218,8 @@ public class World
                             map[col][row-1] = "~~~";
                         }if(array[col][row+1] == null){
                             map[col][row+1] = "~~~";
-                        }if(array[col + 1][row + 1] != null){
-                            array[col + 1][row + 1] = "~~~";
+                        }if(array[col + 1][row + 1] == null){
+                            map[col + 1][row + 1] = "~~~";
                         }
                     }
                 }

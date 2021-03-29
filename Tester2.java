@@ -27,7 +27,7 @@ public class Tester2 {
         System.out.println(bArr[3].getLocation());
         System.out.println(bArr[3].act(jd,w1));
         System.out.println(bArr[2].act(jd,w1));
-        String map = w1.drawTeamMap(bArr, 3);
+        String map = w1.drawTeamMap(bArr, 2);
         System.out.println(map);
     }
 }
