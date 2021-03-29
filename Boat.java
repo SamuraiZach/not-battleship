@@ -62,6 +62,7 @@ public abstract class Boat
                     ash.array[locationx][locationy-1] = obj;
                     ash.array[locationx][locationy] = null;
                     locationy -= 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -72,6 +73,7 @@ public abstract class Boat
                     ash.array[locationx+1][locationy] = obj;
                     ash.array[locationx][locationy] = null;
                     locationx += 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -82,6 +84,7 @@ public abstract class Boat
                     ash.array[locationx][locationy+1] = obj;
                     ash.array[locationx][locationy] = null;
                     locationy += 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -92,6 +95,7 @@ public abstract class Boat
                     ash.array[locationx-1][locationy] = obj;
                     ash.array[locationx][locationy] = null;
                     locationx -= 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -104,6 +108,7 @@ public abstract class Boat
                     ash.array[locationx][locationy] = null;
                     locationy -= 1;
                     locationx += 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -114,6 +119,7 @@ public abstract class Boat
                     ash.array[locationx][locationy] = null;
                     locationy += 1;
                     locationx += 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -124,6 +130,7 @@ public abstract class Boat
                     ash.array[locationx][locationy] = null;
                     locationy += 1;
                     locationx -= 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";
@@ -134,6 +141,7 @@ public abstract class Boat
                     ash.array[locationx][locationy] = null;
                     locationy -= 1;
                     locationx -= 1;
+                    obj.setCoordinates(locationx, locationy);
                     return "Boat moves";
                 }else{
                     return "Cannot move";

@@ -108,7 +108,7 @@ public class AircraftCarrier extends Boat implements Attacker
             }
             else if(array[n] == 4){
                 attack(worldie);
-                finalDood += " ## Engages attack measures";
+                finalDood += " ## Engaged attack measures";
             }
         }
         return finalDood;

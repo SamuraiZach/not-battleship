@@ -34,7 +34,8 @@ public class Submarine extends ScoutBoat implements Attacker
                 attack(worldie);
                 finalDood += " ## Engages attack measures";
             }else if(array[n] == 4){
-                submerge(worldie);
+                
+                System.out.println(submerge(worldie));
                 finalDood += " ## Engages submerge measures";
             }
         }
@@ -44,13 +45,16 @@ public class Submarine extends ScoutBoat implements Attacker
         boolean yup = true;
         String finalyuyp = "";
         while(yup){
-            if(ash.array[(int)Math.random() * (2 + 1) - 1][(int)Math.random() * (2 + 1) - 1] == null){
-                locationx = (int)Math.random() * (2 + 1) - 1;
-                locationy = (int)Math.random() * (2 + 1) - 1;
-                int AtA = 65;
-                char ReportChar = (char)(AtA + locationy);
+            int x = (int)(Math.random() * (2 + 1) - 1);
+            int y = (int)(Math.random() * (2 + 1) - 1);
+            int cacax = locationx + x;
+            int cacay = locationy + y;
+            if(ash.array[cacax][cacay] == null){
+                getLocation().setCoordinates(cacax, cacay);
+                int AtA = 64;
+                char ReportChar = (char)(AtA + cacay);
                 
-                finalyuyp += getID() + " moves to " + ReportChar + "" + locationx;
+                finalyuyp += getID() + " moves to " + ReportChar + "" + cacax;
                 yup = false;
             }
         }

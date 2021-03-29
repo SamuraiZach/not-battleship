@@ -8,8 +8,6 @@ public class Battleship extends Boat implements Attacker
         boooat = teamm;
     }
     public String getID(){
-        int AtA = 64;
-        char ReportChar = (char)(AtA + boooat);
         return("B"+boooat);
     }
     public String getActions(){
@@ -89,7 +87,7 @@ public class Battleship extends Boat implements Attacker
                 finalDood += " ## The boat turned right";
             }
             else if(array[n] == 4){
-                attack(worldie);
+                System.out.println(attack(worldie));
                 finalDood += " ## Engages attack measures";
             }
         }

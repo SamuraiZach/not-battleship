@@ -22,8 +22,8 @@ public class World
         }else{
             height = y;
         }
-        Object[][] array = new Object [width][height];
-        Object[][] map = new Object [width+1][height+1];
+        array = new Object[width+1][height+1];
+        map = new Object[width+1][height+1];
         for(int row = 0; row < array.length; row++){
             for(int col = 0; col < array[row].length; col++){
                 array[row][col] = null;
@@ -103,6 +103,9 @@ public class World
     }
     public String drawTeamMap(Boat[] Boats, int i){
         String gFinal = "";
+        int y = 1;
+        int x = 1;
+        int count = 0;
         if(i == 1){
             for(int row = 0; row < map.length; row++){
                 for(int col = 0; col < map[row].length; col++){
@@ -110,13 +113,14 @@ public class World
                         map[col][row] = "@";
                     }else if(col == 0 && row > 0){
                         int AtA = 64;
-                        int x = 1;
+                        
                         char ReportChar = (char)(AtA + x);
                         map[col][row] = ReportChar;
                         x+=1;
                     }else if(row == 0 && col > 0){
-                        int y = 1;
+                        
                         map[col][row] = y;
+                        y = y + 1;
                     }else{
                         map[col][row] = "###";
                     }
@@ -129,34 +133,43 @@ public class World
                     if(col == 0 && row == 0){
                         map[col][row] = "@";
                     }else if(col == 0 && row > 0){
-                        int AtA = 65;
-                        int x = 1;
+                        int AtA = 64;
                         char ReportChar = (char)(AtA + x);
                         map[col][row] = ReportChar;
                         x+=1;
                     }else if(row == 0 && col > 0){
-                        int y = 1;
+                        
                         map[col][row] = y;
+                        y = y + 1;
                     }
                     else if(array[col][row] != null){
-                        int count = 0;
-                        boolean baba = true;
-                        while(baba){
-                            if(Boats[count] == array[col][row]){
-                                baba = false;
+                        for(int j = 0; j < Boats.length; j++){
+                            if(Boats[j] == array[col][row]){
+                                count = j;
                             }else{
-                                count += 1;
+                                j++;
                             }
                         }
-                        map[col][row] = ("B"+Boats[count].getTeam());
-                        map[col-1][row-1] = "~~~";
-                        map[col-1][row] = "~~~";
-                        map[col-1][row+1] = "~~~";
-                        map[col][row-1] = "~~~";
-                        map[col][row+1] = "~~~";
-                        map[col+1][row-1] = "~~~";
-                        map[col+1][row] = "~~~";
-                        map[col][row+1] = "~~~";
+                        map[col][row] = (Boats[count].getDirection() + Boats[count].getID());
+                        if(array[col-1][row-1] == null){
+                            map[col-1][row-1] = "~~~";
+                        }if(array[col-1][row] == null){
+                            map[col-1][row] = "~~~";
+                        }if(array[col-1][row+1] == null){
+                            map[col-1][row+1] = "~~~";
+                        }if(array[col][row-1] == null){
+                            map[col][row-1] = "~~~";
+                        }if(array[col+1][row-1] == null){
+                            map[col+1][row-1] = "~~~";
+                        }if(array[col+1][row] == null){
+                            map[col+1][row] = "~~~";
+                        }if(array[col][row-1] == null){
+                            map[col][row-1] = "~~~";
+                        }if(array[col][row+1] == null){
+                            map[col][row+1] = "~~~";
+                        }if(array[col + 1][row + 1] != null){
+                            array[col + 1][row + 1] = "~~~";
+                        }
                     }else{
                         map[col][row] = "###";
                     }
@@ -169,36 +182,45 @@ public class World
                     if(col == 0 && row == 0){
                         map[col][row] = "@";
                     }else if(col == 0 && row > 0){
-                        int AtA = 65;
-                        int x = 1;
+                        int AtA = 64;
+                        
                         char ReportChar = (char)(AtA + x);
                         map[col][row] = ReportChar;
                         x+=1;
                     }else if(row == 0 && col > 0){
-                        int y = 1;
+                        
                         map[col][row] = y;
-                    }
-                    else if(array[col][row] != null){
-                        int count = 0;
-                        boolean baba = true;
-                        while(baba){
-                            if(Boats[count] == array[col][row]){
-                                baba = false;
+                        y = y + 1;
+                    }else if(array[col][row] == null){
+                        map[col][row] = "###";
+                    }else{
+                        for(int j = 0; j < Boats.length; j++){
+                            if(Boats[j] == array[col][row]){
+                                count = j;
                             }else{
-                                count += 1;
+                                j++;
                             }
                         }
-                        map[col][row] = (""+Boats[count].getHealth() +"B"+ Boats[count].getTeam());
-                        map[col-1][row-1] = "~~~";
-                        map[col-1][row] = "~~~";
-                        map[col-1][row+1] = "~~~";
-                        map[col][row-1] = "~~~";
-                        map[col][row+1] = "~~~";
-                        map[col+1][row-1] = "~~~";
-                        map[col+1][row] = "~~~";
-                        map[col][row+1] = "~~~";
-                    }else{
-                        map[col][row] = "###";
+                        map[col][row] = (Boats[count].getHealth() + Boats[count].getID());
+                        if(array[col-1][row-1] == null){
+                            map[col-1][row-1] = "~~~";
+                        }if(array[col-1][row] == null){
+                            map[col-1][row] = "~~~";
+                        }if(array[col-1][row+1] == null){
+                            map[col-1][row+1] = "~~~";
+                        }if(array[col][row-1] == null){
+                            map[col][row-1] = "~~~";
+                        }if(array[col+1][row-1] == null){
+                            map[col+1][row-1] = "~~~";
+                        }if(array[col+1][row] == null){
+                            map[col+1][row] = "~~~";
+                        }if(array[col][row-1] == null){
+                            map[col][row-1] = "~~~";
+                        }if(array[col][row+1] == null){
+                            map[col][row+1] = "~~~";
+                        }if(array[col + 1][row + 1] != null){
+                            array[col + 1][row + 1] = "~~~";
+                        }
                     }
                 }
             }
