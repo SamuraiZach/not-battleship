@@ -1,4 +1,4 @@
-public class Tester {
+public class Tester2 {
     public static void main(String[] args) {
         Coordinates x = new Coordinates(3, 6);
         System.out.println(x);
