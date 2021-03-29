@@ -151,24 +151,31 @@ public class World
                             }
                         }
                         map[col][row] = (Boats[count].getDirection() + Boats[count].getID());
-                        if(array[col-1][row-1] == null){
-                            map[col-1][row-1] = "~~~";
-                        }if(array[col-1][row] == null){
-                            map[col-1][row] = "~~~";
-                        }if(array[col-1][row+1] == null){
-                            map[col-1][row+1] = "~~~";
-                        }if(array[col][row-1] == null){
-                            map[col][row-1] = "~~~";
-                        }if(array[col+1][row-1] == null){
-                            map[col+1][row-1] = "~~~";
-                        }if(array[col+1][row] == null){
-                            map[col+1][row] = "~~~";
-                        }if(array[col][row-1] == null){
-                            map[col][row-1] = "~~~";
-                        }if(array[col][row+1] == null){
-                            map[col][row+1] = "~~~";
-                        }if(array[col + 1][row + 1] == null){
-                            map[col + 1][row + 1] = "~~~";
+                        for(int k = 1; k <= Boats[count].getVision(); k++){
+                            if(array[col-k][row-k] == null){
+                                map[col-k][row-k] = "~~~";
+                            }
+                            if(array[col-k][row] == null){
+                                map[col-k][row] = "~~~";
+                            }
+                            if(array[col-k][row+k] == null){
+                                map[col-k][row+k] = "~~~";
+                            }
+                            if(array[col][row-k] == null){
+                                map[col][row-k] = "~~~";
+                            }
+                            if(array[col][row+k] == null){
+                                map[col][row+k] = "~~~";
+                            }
+                            if(array[col+k][row-k] == null){
+                                map[col+k][row-k] = "~~~";
+                            }
+                            if(array[col+k][row] == null){
+                                map[col+k][row-k] = "~~~";
+                            }
+                            if(array[col+k][row+k] == null){
+                                map[col+k][row+k] = "~~~";
+                            }
                         }
                     }else{
                         map[col][row] = "###";
@@ -202,24 +209,31 @@ public class World
                             }
                         }
                         map[col][row] = (Boats[count].getHealth() + Boats[count].getID());
-                        if(array[col-1][row-1] == null){
-                            map[col-1][row-1] = "~~~";
-                        }if(array[col-1][row] == null){
-                            map[col-1][row] = "~~~";
-                        }if(array[col-1][row+1] == null){
-                            map[col-1][row+1] = "~~~";
-                        }if(array[col][row-1] == null){
-                            map[col][row-1] = "~~~";
-                        }if(array[col+1][row-1] == null){
-                            map[col+1][row-1] = "~~~";
-                        }if(array[col+1][row] == null){
-                            map[col+1][row] = "~~~";
-                        }if(array[col][row-1] == null){
-                            map[col][row-1] = "~~~";
-                        }if(array[col][row+1] == null){
-                            map[col][row+1] = "~~~";
-                        }if(array[col + 1][row + 1] == null){
-                            map[col + 1][row + 1] = "~~~";
+                        for(int k = 1; k <= Boats[count].getVision(); k++){
+                            if(array[col-k][row-k] == null){
+                                map[col-k][row-k] = "~~~";
+                            }
+                            if(array[col-k][row] == null){
+                                map[col-k][row] = "~~~";
+                            }
+                            if(array[col-k][row+k] == null){
+                                map[col-k][row+k] = "~~~";
+                            }
+                            if(array[col][row-k] == null){
+                                map[col][row-k] = "~~~";
+                            }
+                            if(array[col][row+k] == null){
+                                map[col][row+k] = "~~~";
+                            }
+                            if(array[col+k][row-k] == null){
+                                map[col+k][row-k] = "~~~";
+                            }
+                            if(array[col+k][row] == null){
+                                map[col+k][row-k] = "~~~";
+                            }
+                            if(array[col+k][row+k] == null){
+                                map[col+k][row+k] = "~~~";
+                            }
                         }
                     }
                 }
