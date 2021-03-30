@@ -102,15 +102,10 @@ public class World
         }
     }
     public String drawTeamMap(Boat[] Boats, int i){
-        for(int row = 0; row < map.length; row++){
-            for(int col = 0; col < map[row].length; col++){
-                map[row][col] = " ";
-            }
-        }
+        
         String gFinal = "";
         int y = 1;
         int x = 1;
-        int count = 0;
         if(i == 1){
             for(int row = 0; row < map.length; row++){
                 for(int col = 0; col < map[row].length; col++){
@@ -148,11 +143,12 @@ public class World
                         y = y + 1;
                     }
                     else if(array[col][row] != null){
+                        int count = 0;
                         for(int j = 0; j < Boats.length; j++){
                             if(Boats[j] == array[col][row]){
                                 count = j;
                             }else{
-                                j++;
+                                ;
                             }
                         }
                         map[col][row] = (Boats[count].getDirection() + Boats[count].getID());
@@ -205,16 +201,13 @@ public class World
                         
                         map[col][row] = y;
                         y = y + 1;
-                    }else if(array[col][row] == null){
-                        if(map[col][row] != "~~~"){
-                            map[col][row] = "###";
-                        }
-                    }else{
+                    }else if(array[col][row] != null){
+                        int count = 0;
                         for(int j = 0; j < Boats.length; j++){
                             if(Boats[j] == array[col][row]){
                                 count = j;
                             }else{
-                                j++;
+                                ;
                             }
                         }
                         map[col][row] = (Boats[count].getHealth() + Boats[count].getID());
@@ -243,6 +236,10 @@ public class World
                             if(array[col+k][row+k] == null){
                                 map[col+k][row+k] = "~~~";
                             }
+                        }
+                    }else{
+                        if(map[col][row] != "~~~"){
+                            map[col][row] = "###";
                         }
                     }
                 }

@@ -49,6 +49,8 @@ public class Submarine extends ScoutBoat implements Attacker
             int cacay = locationy + y;
             if(ash.array[cacax][cacay] == null){
                 getLocation().setCoordinates(cacax, cacay);
+                ash.array[cacax][cacay] = getLocation();
+                ash.array[locationx][locationy] = null;
                 int AtA = 64;
                 char ReportChar = (char)(AtA + cacay);
                 
