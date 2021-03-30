@@ -21,7 +21,7 @@ public class Tester2 {
         //System.out.println(bArr[1].getLocation());
         //System.out.println(bArr[1].move(w1));
         System.out.println(bArr[1].getLocation());
-        System.out.println(bArr[1].move(w1));
+        //System.out.println(bArr[1].move(w1));
         System.out.println(bArr[1].turn(-1));
         System.out.println(bArr[1].move(w1));
         System.out.println(bArr[1].turn(1));

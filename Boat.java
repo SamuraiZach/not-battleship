@@ -157,7 +157,7 @@ public abstract class Boat
                 getDirection();
                 an = getID() + " turned left, now facing "+ directo;
             }else{
-                direction -= 1;
+                this.direction -= 1;
                 getDirection();
                 an = getID() + " turned left, now facing "+ directo; 
             }
@@ -169,7 +169,7 @@ public abstract class Boat
                 an = getID() + " turned left, now facing "+ directo;
             }
             else{
-                direction += 1;
+                this.direction += 1;
                 getDirection();
                 an = getID() + " turned left, now facing "+ directo;
             }
