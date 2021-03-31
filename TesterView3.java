@@ -6,8 +6,8 @@ public class TesterView3{
         bArr[1] = new Submarine(2,new Coordinates(8,8), 1, 4);
         for(Boat b: bArr){
             w1.setOccupant(b, b.getLocation());
-        }
-        String map = w1.drawTeamMap(bArr, 3);
+        }String map = w1.drawTeamMap(bArr, 3);
         System.out.println(map);
+        
     }
 }
