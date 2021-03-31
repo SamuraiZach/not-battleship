@@ -87,8 +87,8 @@ public class Battleship extends Boat implements Attacker
                 finalDood += " ## The boat turned right";
             }
             else if(array[n] == 4){
-                System.out.println(attack(worldie));
                 finalDood += " ## Engages attack measures";
+                System.out.println(attack(worldie));
             }
         }
         return finalDood;

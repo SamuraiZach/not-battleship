@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestAttack",
+            "request": "launch",
+            "mainClass": "TestAttack",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TurnBoat",
+            "request": "launch",
+            "mainClass": "TurnBoat",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestSubmer",
+            "request": "launch",
+            "mainClass": "TestSubmer",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TesterView3",
+            "request": "launch",
+            "mainClass": "TesterView3",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TesterView2",
+            "request": "launch",
+            "mainClass": "TesterView2",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TesterView1",
+            "request": "launch",
+            "mainClass": "TesterView1",
+            "projectName": "not-battleship_c447bb0b"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
